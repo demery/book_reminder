@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :lender %><br>
-    <%= f.text_field :lender, Book::LIBRARIES, include_blank: true %>
+    <%= f.select :lender, Book::LIBRARIES, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :lender_other %><br>

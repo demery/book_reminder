@@ -1,13 +1,21 @@
 class Book < ActiveRecord::Base
-  validates :title, presence: true
-  validates :author, presence: true
-
   LIBRARIES = [
-      'Penn Libraries',
+      'Drexel Library',
       'Free Library of Philadelphia',
       'The Library Company',
-      'Drexel Library',
-      'Other (please provide)'
-  ]
+      'Penn Libraries',
+      'Other'
+  ].freeze
 
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :lender, inclusion: { in: LIBRARIES }
+
+  def full_name
+    [call_number, title, author].compact.join '; '
+  end
+
+  def lender_display
+    lender || lender_other
+  end
 end
