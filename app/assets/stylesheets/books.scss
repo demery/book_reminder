@@ -1,3 +1,27 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'base/colors.css.scss';
+
+body {
+  color: $special-blue;
+}
+
+h1 {
+  color: $upenn-blue;
+}
+
+.special {
+  font-weight: bold;
+}
+
+.red {
+  color: $special-red
+}
+.blue {
+  color: $special-blue;
+}
+.gold {
+  color: $special-gold;
+}
