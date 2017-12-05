@@ -31,17 +31,17 @@
     <%= f.label :lender_other %><br>
     <%= f.text_field :lender_other %>
   </div>
-  <div class="field" data-behaviour='datepicker>
+  <div class="field" data-behaviour="datepicker">
     <%= f.label :date_due %><br>
-    <%= f.date_select :date_due, include_blank: true %>
+    <%= f.text_field :date_due, 'data-provide' => 'datepicker', include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :renew %><br>
     <%= f.check_box :renew %>
   </div>
-  <div class="field" data-behaviour='datepicker>
+  <div class="field" data-behaviour="datepicker">
     <%= f.label :reminder %><br>
-    <%= f.date_select :reminder, include_blank: true %>
+    <%= f.text_field :reminder, 'data-provide' => 'datepicker', include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
